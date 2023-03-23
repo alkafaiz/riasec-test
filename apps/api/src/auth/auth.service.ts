@@ -21,10 +21,7 @@ export class AuthService {
     }
 
     // handle wrong username or password
-    throw new UnauthorizedException({
-      message: 'Wrong username or password',
-      statusCode: 401,
-    });
+    throw new UnauthorizedException('Wrong username or password');
   }
 
   async login(user: any) {
