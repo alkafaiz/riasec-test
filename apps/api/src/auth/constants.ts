@@ -1,3 +1,4 @@
 export const jwtConstants = {
-    secret: 'testingSecretJwtWithNestJs'
+    secret: 'testingSecretJwtWithNestJs',
+    refresh_secret: 'testingRefreshSecretJwtWithNestJs'
 };

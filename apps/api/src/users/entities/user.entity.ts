@@ -10,6 +10,9 @@ export class UserEntity implements Partial<User> {
   @Exclude()
   password?: string;
 
+  @Exclude()
+  refreshToken?: string;
+
   constructor(partial: Partial<UserEntity>) {
     Object.assign(this, partial);
   }

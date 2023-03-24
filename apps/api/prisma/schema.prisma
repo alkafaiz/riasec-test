@@ -16,4 +16,5 @@ model User {
   firstName  String
   lastName  String?
   password String
+  refreshToken String?
 }
