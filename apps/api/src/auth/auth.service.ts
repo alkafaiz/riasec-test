@@ -30,4 +30,8 @@ export class AuthService {
       access_token: this.jwtService.sign(payload),
     };
   }
+
+  storeTokenInCookie(res: any, authToken: any) {
+    res.cookie('access_token', authToken.access_token, { maxAge: 1000 * 60 * 15, httpOnly: true });
+  }
 }

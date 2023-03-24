@@ -5,6 +5,7 @@ import {
   Get,
   Post,
   Request,
+  Response,
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
@@ -26,8 +27,11 @@ export class AppController {
 
   @UseGuards(LocalAuthGuard)
   @Post('/auth/login')
-  async login(@Request() req) {
-    return this.authService.login(req.user);
+  async login(@Request() req, @Response() res) {
+    const token = await this.authService.login(req.user);
+    this.authService.storeTokenInCookie(res, token);
+    res.status(200).send({ message: 'ok' });
+    return;
   }
 
   @UseGuards(JwtAuthGuard)
