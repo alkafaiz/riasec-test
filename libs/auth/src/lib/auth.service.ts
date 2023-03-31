@@ -1,8 +1,8 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { User } from '@prisma/client';
-import { UsersService } from '../users/users.service';
-import { compareHash, hash } from '../utils/encryption';
+import { UsersService } from '@riasec-test/users';
+import { compareHash, hash } from '@riasec-test/encryption';
 import { jwtConstants } from './constants';
 import { AuthTokenDto } from './dto/auth-token.dto';
 import { JwtParsedPayload } from './dto/jwt.dto';

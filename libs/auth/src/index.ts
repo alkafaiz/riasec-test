@@ -7,7 +7,7 @@ export * from './lib/dto/jwt.dto';
 
 // guards
 export * from './lib/guards/jwt-auth.guard';
-export * from './lib/guards/local-auth.guard';
+export * from './lib/guards/jwt-refresh.guard';
 export * from './lib/guards/local-auth.guard';
 
 // strategies

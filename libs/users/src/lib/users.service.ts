@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Prisma, User } from '@prisma/client';
 import { PrismaService } from '@riasec-test/prisma';
-import { hash } from '../utils/encryption';
+import { hash } from '@riasec-test/encryption';
 
 @Injectable()
 export class UsersService {

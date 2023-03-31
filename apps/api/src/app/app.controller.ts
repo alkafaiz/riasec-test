@@ -9,14 +9,8 @@ import {
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
-import { AuthService } from '../auth/auth.service';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
-import { LocalAuthGuard } from '../auth/local-auth.guard';
-import { User as UserModel } from '@prisma/client';
-import { UsersService } from '../users/users.service';
-import { CreateUserDto } from '../users/dto/create-user.dto';
-import { UserEntity } from '../users/entities/user.entity';
-import { RefreshAuthGuard } from '../auth/jwt-refresh.guard';
+import { AuthService, JwtAuthGuard, LocalAuthGuard, RefreshAuthGuard } from '@riasec-test/auth';
+import { UsersService, UserEntity, CreateUserDto } from '@riasec-test/users';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller()
