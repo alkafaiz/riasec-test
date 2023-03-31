@@ -1,8 +1,8 @@
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
-import { jwtConstants } from './constants';
+import { jwtConstants } from '../constants';
 import { Injectable } from '@nestjs/common';
-import { JwtParsedPayload, JwtPayload } from './dto/jwt.dto';
+import { JwtParsedPayload, JwtPayload } from '../dto/jwt.dto';
 import { Request as RequestType } from 'express';
 
 @Injectable()
