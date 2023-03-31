@@ -11,10 +11,30 @@ datasource db {
 }
 
 model User {
-  id    Int     @default(autoincrement()) @id
-  email String  @unique
-  firstName  String
-  lastName  String?
-  password String
+  id           Int     @id @default(autoincrement())
+  email        String  @unique
+  firstName    String
+  lastName     String?
+  password     String
   refreshToken String?
+  Quiz         Quiz[]
+}
+
+model Quiz {
+  id        String     @id @default(uuid())
+  uuid      String     @unique
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  completed Boolean    @default(false)
+  content   String?
+  published Boolean    @default(false)
+  author    User       @relation(fields: [authorId], references: [id])
+  authorId  Int
+  status    QuizStatus @default(DRAFT)
+}
+
+enum QuizStatus {
+  DRAFT
+  STARTED
+  COMPLETED
 }
