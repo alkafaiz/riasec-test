@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { PrismaService } from '@riasec-test/prisma';
 import { QuizesController, QuizesModule, QuizesService } from '@riasec-test/quizes';
-import { AuthModule } from '../auth/auth.module';
-import { UsersModule } from '../users/users.module';
+import { AuthModule } from '@riasec-test/auth';
+import { UsersModule } from '@riasec-test/users';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';

@@ -17,7 +17,8 @@
     "paths": {
       "@riasec-test/auth": ["libs/auth/src/index.ts"],
       "@riasec-test/prisma": ["libs/prisma/src/index.ts"],
-      "@riasec-test/quizes": ["libs/quizes/src/index.ts"]
+      "@riasec-test/quizes": ["libs/quizes/src/index.ts"],
+      "@riasec-test/users": ["libs/users/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
